@@ -1,5 +1,5 @@
 
-web: gunicorn Testapi.wsgi:application --log-file - --log-level debug
+web: gunicorn MYSITE.wsgi:application --log-file - --log-level debug
 release: python manage.py makemigrations --noinput
 release: python manage.py colectstatic --noinput
 
