@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)afpohou4$#)0^v89jc&=kg8(nj(is*93x!4)g1*pv+tre!v45
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['localhost','faceabhi.herokuapp.com']
 
 
 # Application definition
@@ -76,10 +76,16 @@ WSGI_APPLICATION = 'Testapi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# postgres://hnyadbhbmwaakv:ff5ff7422da724556d6e83cc71589ea30e9485a52307b228174d671402cb5996@ec2-44-206-11-200.compute-1.amazonaws.com:5432/d656dubf61vdr6
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd656dubf61vdr6',
+        'HOST':'ec2-44-206-11-200.compute-1.amazonaws.com',
+        'PORT':'5432',
+        'USER':'hnyadbhbmwaakv',
+        'PASSWORD':'ff5ff7422da724556d6e83cc71589ea30e9485a52307b228174d671402cb5996'
     }
 }
 
